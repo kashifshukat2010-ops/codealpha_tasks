@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phishing Awareness Training — CodeAlpha Cyber Security (Task 2)</title>
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; background: #0f172a; color: #e2e8f0; line-height: 1.6; }
+  header { background: linear-gradient(135deg, #1e3a8a, #7c3aed); padding: 2.5rem 1.5rem; text-align: center; }
+  header h1 { margin: 0; font-size: 2rem; }
+  header p { opacity: .85; margin: .5rem 0 0; }
+  main { max-width: 860px; margin: 0 auto; padding: 1.5rem; }
+  section { background: #1e293b; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; border: 1px solid #334155; }
+  h2 { color: #93c5fd; margin-top: 0; }
+  .redflag { background: #3f1d1d; border-left: 4px solid #ef4444; padding: .8rem 1rem; margin: .6rem 0; border-radius: 0 8px 8px 0; }
+  .tip { background: #12332a; border-left: 4px solid #22c55e; padding: .8rem 1rem; margin: .6rem 0; border-radius: 0 8px 8px 0; }
+  .example { background: #2a2118; border: 1px dashed #f59e0b; padding: .8rem 1rem; margin: .6rem 0; border-radius: 8px; }
+  code { background: #0b1220; padding: .15rem .45rem; border-radius: 4px; color: #fbbf24; }
+  .quiz-q { background: #1e293b; border: 1px solid #475569; border-radius: 8px; padding: 1rem; margin: .8rem 0; }
+  .quiz-q button { display: block; width: 100%; text-align: left; margin: .35rem 0; padding: .6rem .8rem;
+                   background: #334155; color: #e2e8f0; border: none; border-radius: 6px; cursor: pointer; font-size: 1rem; }
+  .quiz-q button:hover { background: #475569; }
+  .quiz-q button.correct { background: #166534; }
+  .quiz-q button.wrong { background: #991b1b; }
+  .quiz-q .feedback { margin-top: .5rem; font-weight: bold; display: none; }
+  #score { text-align: center; font-size: 1.3rem; margin-top: 1rem; color: #93c5fd; }
+  footer { text-align: center; padding: 1.5rem; opacity: .6; font-size: .9rem; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🎣 Phishing Awareness Training</h1>
+  <p>CodeAlpha — Cyber Security Internship, Task 2 · Learn to spot the hook before you bite</p>
+</header>
+
+<main>
+
+<section>
+  <h2>1. Phishing kya hai?</h2>
+  <p>Phishing ek <b>social engineering</b> hamla hai: attacker aap ko <b>dhoka de kar</b> password, OTP ya bank details nikalwata hai — system hack kiye baghair, <b>insan</b> ko target karke.</p>
+  <p>Common types: <b>Email phishing</b> (bulk fake emails), <b>Spear phishing</b> (ek specific shakhs ko), <b>Smishing</b> (SMS), <b>Vishing</b> (phone call).</p>
+</section>
+
+<section>
+  <h2>2. Phishing email pehchano — 6 red flags 🚩</h2>
+  <div class="redflag"><b>1. Sender ka address ajeeb:</b> <code>support@paypa1-secure.com</code> — asal <code>paypal.com</code> nahi!</div>
+  <div class="redflag"><b>2. Urgency / darr:</b> "Your account will be BLOCKED in 24 hours!" — jaldi ka pressure sochne nahi deta.</div>
+  <div class="redflag"><b>3. Generic greeting:</b> "Dear Customer" — asal company aap ka naam likhti hai.</div>
+  <div class="redflag"><b>4. Suspicious links:</b> hover karo — link text "login" ho, asal URL kuch aur. <code>bit.ly</code> jaisay shorteners se hoshyar raho.</div>
+  <div class="redflag"><b>5. Attachments:</b> unexpected "invoice.zip" / "receipt.exe" — kabhi na kholo.</div>
+  <div class="redflag"><b>6. Grammar / design:</b> tootay-phootay jumlay, blurry logos — professional companies aisi email nahi bhejtein.</div>
+</section>
+
+<section>
+  <h2>3. Fake websites — URL tricks 🔗</h2>
+  <p>Attackers asal jaisi sites banatay hain. Check karo:</p>
+  <ul>
+    <li><b>Spelling:</b> <code>faceb00k.com</code>, <code>g00gle-login.com</code></li>
+    <li><b>Subdomain trick:</b> <code>paypal.secure-login.xyz</code> — asal domain aakhir mein hota hai (<code>.xyz</code> yahan asal hai!)</li>
+    <li><b>HTTPS ≠ safe:</b> lock icon ka matlab sirf connection encrypted hai — phishing sites par bhi HTTPS hota hai!</li>
+    <li><b>Homograph:</b> <code>аpple.com</code> mein 'a' Cyrillic ho sakta hai — nazar se nahi pakra jata.</li>
+  </ul>
+  <div class="tip"><b>Golden rule:</b> link par click karne ke bajaye khud browser mein official site ka address likho.</div>
+</section>
+
+<section>
+  <h2>4. Social engineering tactics 🧠</h2>
+  <ul>
+    <li><b>Authority:</b> "Main bank ka manager bol raha hun" — ohda dikha kar darana</li>
+    <li><b>Urgency:</b> "Abhi karo warna account band!"</li>
+    <li><b>Curiosity / Greed:</b> "Aap ne Rs. 500,000 jeetay hain!"</li>
+    <li><b>Trust:</b> dost ya boss ban kar message ("CEO fraud" / BEC attacks)</li>
+    <li><b>Helpfulness:</b> "IT support hun, apna password verify karein"</li>
+  </ul>
+</section>
+
+<section>
+  <h2>5. Bachne ke best practices ✅</h2>
+  <div class="tip">1. Links par <b>hover</b> karke asal URL dekho — click se pehle.</div>
+  <div class="tip">2. <b>2FA/MFA</b> on rakho — password leak bhi ho to account bacha rehta hai.</div>
+  <div class="tip">3. OTP / password <b>phone par kabhi share na karo</b> — bank kabhi nahi mangta.</div>
+  <div class="tip">4. Unexpected attachment <b>na kholo</b>, sender ko alag se verify karo.</div>
+  <div class="tip">5. Shak ho to <b>report</b> karo — company IT / PTA / FIA cybercrime.</div>
+</section>
+
+<section>
+  <h2>6. Real-world examples 🌍</h2>
+  <div class="example"><b>2024 — Bank SMS scam (Pakistan):</b> "Dear customer, your ATM blocked, call helpline" — call karne par OTP manga gaya, account khaali. <i>Lesson: bank kabhi OTP nahi mangta.</i></div>
+  <div class="example"><b>2016 — US election spear phishing:</b> targeted emails se campaign accounts compromise huay — ek click ne bara nuksan kiya. <i>Lesson: spear phishing sab se khatarnak hai.</i></div>
+  <div class="example"><b>Common — Fake courier SMS:</b> "Your parcel is held, pay Rs. 150 customs: [link]" — link fake payment page kholta hai. <i>Lesson: official app/site khud kholo.</i></div>
+</section>
+
+<section>
+  <h2>7. Interactive Quiz — khud ko test karo! 📝</h2>
+  <div id="quiz"></div>
+  <div id="score"></div>
+</section>
+
+</main>
+
+<footer>CodeAlpha Cyber Security Internship — Task 2 · Phishing Awareness Training · Made by Muhammad Kashif Shoukat</footer>
+
+<script>
+const QUESTIONS = [
+  { q: "Email aya: 'Dear Customer, your account will be suspended in 24 hours, verify now: bit.ly/xyz'. Sab se bara red flag?",
+    opts: ["Email lambi hai", "Generic greeting + urgency + shortened link", "Company ka naam likha hai"],
+    ans: 1, why: "Teenon red flags ek saath: generic greeting, urgency, aur short link." },
+  { q: "Kaunsa URL sab se zyada suspicious hai?",
+    opts: ["https://www.hbl.com", "https://hbl-secure-login.com", "https://www.hbl.com/login"],
+    ans: 1, why: "hbl-secure-login.com — 'hbl' subdomain nahi, poori domain hi fake hai." },
+  { q: "Browser mein lock icon (HTTPS) ka matlab?",
+    opts: ["Site 100% asli hai", "Sirf connection encrypted hai — phishing site par bhi ho sakta hai", "Site government verified hai"],
+    ans: 1, why: "HTTPS sirf encryption hai, authenticity ki guarantee nahi." },
+  { q: "Anjan number se call: 'Main bank se hun, apna OTP batayein warna account block'. Kya karo?",
+    opts: ["OTP de do, bank hai", "Call kaat kar bank ke official number par khud call karo", "Dobara call ka wait karo"],
+    ans: 1, why: "Bank kabhi OTP nahi mangta — khud official number milao." },
+  { q: "Phishing se bachne ka sab se strong technical defense?",
+    opts: ["Antivirus", "MFA / 2FA on rakhna", "Email delete karna"],
+    ans: 1, why: "MFA se password leak hone par bhi attacker andar nahi aa sakta." },
+];
+let score = 0, answered = 0;
+const quizDiv = document.getElementById('quiz');
+QUESTIONS.forEach((item, i) => {
+  const box = document.createElement('div');
+  box.className = 'quiz-q';
+  box.innerHTML = `<b>Q${i+1}.</b> ${item.q}`;
+  const fb = document.createElement('div');
+  fb.className = 'feedback';
+  item.opts.forEach((opt, j) => {
+    const b = document.createElement('button');
+    b.textContent = opt;
+    b.onclick = () => {
+      if (box.dataset.done) return;
+      box.dataset.done = "1"; answered++;
+      const buttons = box.querySelectorAll('button');
+      buttons[item.ans].classList.add('correct');
+      if (j === item.ans) { score++; fb.style.color = '#4ade80'; fb.textContent = '✅ Sahi! ' + item.why; }
+      else { b.classList.add('wrong'); fb.style.color = '#f87171'; fb.textContent = '❌ Ghalat. ' + item.why; }
+      fb.style.display = 'block';
+      if (answered === QUESTIONS.length)
+        document.getElementById('score').textContent =
+          `Score: ${score}/${QUESTIONS.length} — ` + (score >= 4 ? '🎉 Phishing-proof!' : '📖 Upar wale sections dobara parho!');
+    };
+    box.appendChild(b);
+  });
+  box.appendChild(fb);
+  quizDiv.appendChild(box);
+});
+</script>
+</body>
+</html>
